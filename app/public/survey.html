@@ -5,10 +5,179 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  
+  <h1>Survey Question</h1>
+  <form>
+    <div class="form-group">
+      <label for="name">Name (Required)</label>
+      <input type="text" class="form-control" id="name">
+    </div>
+    <div class="form-group">
+      <label for="photo">Link to Photo Image (Required)</label>
+      <input type="text" class="form-control" id="photo">
+    </div>
+    <br>
+    <hr>
+        <h4>Question 1</h4>
+        <h5>You like long walks on the beach.</h5>
+        <select class="chosen-select" name= "q1" id="q1" required>
+          <option selected>Select an Option</option>
+          <option>1 (Strongly Disagree)</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5 (Strongly Agree)</option>
+        </select>
+        <p></p>
+        <h4>Question 2</h4>
+        <h5>You love ice cream!</h5>
+        <select class="chosen-select" name= "q2" id="q2" required>
+          <option selected>Select an Option</option>
+          <option>1 (Strongly Disagree)</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5 (Strongly Agree)</option>
+        </select>
+        <p></p>
+        <h4>Question 3</h4>
+        <h5>People can rely on you.</h5>
+        <select class="chosen-select" name= "q3" id="q3" required>
+          <option selected>Select an Option</option>
+          <option>1 (Strongly Disagree)</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5 (Strongly Agree)</option>
+        </select>
+        <p></p>
+        <h4>Question 4</h4>
+        <h5>You rather watch Netflix than go clubbing.</h5>
+        <select class="chosen-select" name= "q4" id="q4" required>
+          <option selected>Select an Option</option>
+          <option>1 (Strongly Disagree)</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5 (Strongly Agree)</option>
+        </select>
+        <p></p>
+        <h4>Question 5</h4>
+        <h5>You have a sense of humor.</h5>
+        <select class="chosen-select" name= "q5" id="q5" required>
+          <option selected>Select an Option</option>
+          <option>1 (Strongly Disagree)</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5 (Strongly Agree)</option>
+        </select>
+        <p></p>
+        <h4>Question 6</h4>
+        <h5>Working out is important to you.</h5>
+        <select class="chosen-select" name= "q6" id="q6" required>
+          <option selected>Select an Option</option>
+          <option>1 (Strongly Disagree)</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5 (Strongly Agree)</option>
+        </select>
+        <p></p>
+        <h4>Question 7</h4>
+        <h5>Eating healthy is important to you.</h5>
+        <select class="chosen-select" name= "q7" id="q7" required>
+          <option selected>Select an Option</option>
+          <option>1 (Strongly Disagree)</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5 (Strongly Agree)</option>
+        </select>
+        <p></p>
+        <h4>Question 8</h4>
+        <h5>You like to travel.</h5>
+        <select class="chosen-select" name= "q8" id="q8" required>
+          <option selected>Select an Option</option>
+          <option>1 (Strongly Disagree)</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5 (Strongly Agree)</option>
+        </select>
+        <p></p>
+        <h4>Question 9</h4>
+        <h5>You believe in climate change</h5>
+        <select class="chosen-select" name= "q9" id="q9" required>
+          <option selected>Select an Option</option>
+          <option>1 (Strongly Disagree)</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5 (Strongly Agree)</option>
+        </select>
+        <p></p>
+        <h4>Question 10</h4>
+        <h5>You are always on time.</h5>
+        <select class="chosen-select" name= "q10" id="q10" required>
+          <option selected>Select an Option</option>
+          <option>1 (Strongly Disagree)</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5 (Strongly Agree)</option>
+        </select>
+     
 
-  
+
+
+
+
+
+<hr>
+<div>
+  <button type="submit" class="btn btn-primary" id = "getInfo">Submit</button>
+</div>
+  </form>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+
+  document.getElementById('getInfo').addEventListener('click', e => {
+    e.preventDefault()
+    let friend = {
+      "name": document.getElementById('name').value,
+      "photo": document.getElementById('photo').value,
+      "score": [
+        parseInt(document.getElementById('q1').value),
+        parseInt(document.getElementById('q2').value),
+        parseInt(document.getElementById('q3').value),
+        parseInt(document.getElementById('q4').value),
+        parseInt(document.getElementById('q5').value),
+        parseInt(document.getElementById('q6').value),
+        parseInt(document.getElementById('q7').value),
+        parseInt(document.getElementById('q8').value),
+        parseInt(document.getElementById('q9').value),
+        parseInt(document.getElementById('q10').value)
+      ]
+    }
+    console.log(friend)
+  })
+
+
+
+
+
+</script>
 </body>
 </html>

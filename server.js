@@ -2,8 +2,9 @@ const express = require('express')
 const { join } = require('path')
 const app = express()
 
+// adding/app made css work
 // middleware
-app.use(express.static(join(__dirname, 'public')))
+app.use(express.static(join(__dirname, './app/public')))
 // send json from front end to back end
 app.use(express.json())
 // lets us use nested javascript objects
@@ -14,10 +15,9 @@ app.use(express.urlencoded({ extended: true }))
 // app.set('view engine', 'jsx')
 // app.engine('jsx', require('express-react-views').createEngine())
 
-app.get('/survey', (req, res) => {
-  res.send('hello')
-})
-
+// this route is to show the survery 
+require('./app/routing/apiRoutes.js')(app)
+require('./app/routing/htmlRoutes.js')(app)
 
 
 app.listen(3000)
