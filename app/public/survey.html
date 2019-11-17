@@ -153,8 +153,15 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
 
+
+
+
+
+  
+
   document.getElementById('getInfo').addEventListener('click', e => {
     e.preventDefault()
+    
     let friend = {
       "name": document.getElementById('name').value,
       "photo": document.getElementById('photo').value,
@@ -171,9 +178,47 @@
         parseInt(document.getElementById('q10').value)
       ]
     }
-    console.log(friend)
-  })
+    let inputs = document.getElementsByTagName('input')
+    let checkSelect = document.getElementsByTagName('select')
 
+    for (let i = 0; i < checkSelect.length; i++) {
+      let check = checkSelect[i]
+      if (check.value === 'Select an Option') {
+        return alert(`${check.value} is required`)
+      } else {
+        
+      }
+    }
+
+    for (let i = 0; i < inputs.length; i++) {
+      let inputField = inputs[i]
+      if (inputField.value === '') {
+        return alert(`${inputField.id} is required`)
+      } else {
+
+      }
+    }
+
+    document.getElementById('name').value = ''
+    document.getElementById('photo').value = ''
+    document.getElementById('q1').value = ''
+    document.getElementById('q2').value = ''
+    document.getElementById('q3').value = ''
+    document.getElementById('q4').value = ''
+    document.getElementById('q5').value = ''
+    document.getElementById('q6').value = ''
+    document.getElementById('q7').value = ''
+    document.getElementById('q8').value = ''
+    document.getElementById('q9').value = ''
+    document.getElementById('q10').value = ''
+
+    
+    axios.post('/api/friends', friend)
+    .then(res => {
+    
+    })
+    .catch(e => console.log(e))
+  })
 
 
 

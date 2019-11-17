@@ -7,7 +7,7 @@ module.exports = app => {
     })
 
     app.post('/api/friends', (req, res) => {
-      res.send(friend)
-      
+      friend.push(req.body)
+      res.sendStatus(200)
     })
 }
