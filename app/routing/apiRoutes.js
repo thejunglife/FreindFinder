@@ -18,29 +18,23 @@ module.exports = app => {
       let defaultDiff = 51
 
       for (let i = 0; i < friend.length; i++) {
-
         let totalDiff = 0
 
           for (let j = 0; j < friend[i].scores.length; j++) {
-           
+          //  calculating absolute difference from each different friend and user
             let difference = Math.abs(friend[i].scores[j] - user.scores[j])
             totalDiff += difference
-            
           }
 
           if (totalDiff < defaultDiff) {
             defaultDiff = totalDiff
             bestMatch = i
-
           }
-      
-     
-      
     }
-   
+  //  add user to friend list
     friend.push(user)
-
+  //  send out best match
     res.json(friend[bestMatch])
-  })
+    })
 
   }
