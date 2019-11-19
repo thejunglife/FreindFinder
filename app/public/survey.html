@@ -165,7 +165,7 @@
     let friend = {
       "name": document.getElementById('name').value,
       "photo": document.getElementById('photo').value,
-      "score": [
+      "scores": [
         parseInt(document.getElementById('q1').value),
         parseInt(document.getElementById('q2').value),
         parseInt(document.getElementById('q3').value),
@@ -214,11 +214,15 @@
 
     
     axios.post('/api/friends', friend)
-    .then(res => {
+    .then(({ data }) => {
     
     })
     .catch(e => console.log(e))
+
+
   })
+
+
 
 
 
